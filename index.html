@@ -289,6 +289,20 @@ body.light-mode .social-icons a:hover {
   height: auto;
   object-fit: cover;
 }
+/* Responsive modal images */
+.modal-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 250px; /* limit height on mobile */
+}
+
+@media (min-width: 768px) {
+  .modal-img {
+    width: 50%;
+    max-height: 100%; /* larger allowed on desktop */
+  }
+}
 
 
   </style>
@@ -432,12 +446,13 @@ body.light-mode .social-icons a:hover {
 </section>
 
 <!-- Project Modals -->
+
 <!-- 1 -->
 <div class="modal fade" id="proj1Modal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-light d-flex flex-md-row">
-      <img src="projects/complain.png" class="w-50 rounded-start" alt="Complaint Management">
-      <div class="p-4 w-50">
+    <div class="modal-content bg-dark text-light d-flex flex-column flex-md-row">
+      <img src="projects/complain.png" class="img-fluid modal-img" alt="Complaint Management">
+      <div class="p-4 flex-fill">
         <h4>Complaint Management System</h4>
         <p>A Python-based complaint registration system using CLI. Allows users to file, track, and resolve complaints efficiently.</p>
       </div>
@@ -448,9 +463,9 @@ body.light-mode .social-icons a:hover {
 <!-- 2 -->
 <div class="modal fade" id="proj2Modal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-light d-flex flex-md-row">
-      <img src="projects/ble1.jpg" class="w-50 rounded-start" alt="BLE Mesh">
-      <div class="p-4 w-50">
+    <div class="modal-content bg-dark text-light d-flex flex-column flex-md-row">
+      <img src="projects/ble1.jpg" class="img-fluid modal-img" alt="BLE Mesh">
+      <div class="p-4 flex-fill">
         <h4>BLE Mesh Monitoring</h4>
         <p>Wearable tech for patient monitoring using BLE Mesh. Scalable, reliable, and supports real-time visualization.</p>
         <a href="https://youtu.be/VFXUQjVbaOo?si=z__W5s2nZGqLmT6I" target="_blank" class="btn btn-sm btn-info mt-2">Watch Demo</a>
@@ -462,9 +477,9 @@ body.light-mode .social-icons a:hover {
 <!-- 3 -->
 <div class="modal fade" id="proj3Modal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-light d-flex flex-md-row">
-      <img src="projects/aj2.jpg" class="w-50 rounded-start" alt="AJ TEAS">
-      <div class="p-4 w-50">
+    <div class="modal-content bg-dark text-light d-flex flex-column flex-md-row">
+      <img src="projects/aj2.jpg" class="img-fluid modal-img" alt="AJ TEAS">
+      <div class="p-4 flex-fill">
         <h4>AJ TEAS Website</h4>
         <p>A static responsive menu website for a tea shop, built using HTML & CSS with a clean design and device-friendly layout.</p>
         <a href="https://coffyday.netlify.app/" target="_blank" class="btn btn-sm btn-info mt-2">Visit Site</a>
@@ -476,9 +491,9 @@ body.light-mode .social-icons a:hover {
 <!-- 4 -->
 <div class="modal fade" id="proj4Modal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-light d-flex flex-md-row">
-      <img src="projects/smatr fan.jfif" class="w-50 rounded-start" alt="Smart Fan">
-      <div class="p-4 w-50">
+    <div class="modal-content bg-dark text-light d-flex flex-column flex-md-row">
+      <img src="projects/smatr fan.jfif" class="img-fluid modal-img" alt="Smart Fan">
+      <div class="p-4 flex-fill">
         <h4>IoT-Based Smart Fan System</h4>
         <p>Developed using ESP32 + temperature sensor with ThingSpeak IoT for real-time monitoring, visualization, and automatic fan speed control.</p>
       </div>
@@ -489,9 +504,9 @@ body.light-mode .social-icons a:hover {
 <!-- 5 -->
 <div class="modal fade" id="proj5Modal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-light d-flex flex-md-row">
-      <img src="projects/ir.jpg" class="w-50 rounded-start" alt="IR Monitoring">
-      <div class="p-4 w-50">
+    <div class="modal-content bg-dark text-light d-flex flex-column flex-md-row">
+      <img src="projects/ir.jpg" class="img-fluid modal-img" alt="IR Monitoring">
+      <div class="p-4 flex-fill">
         <h4>IR Sensor Monitoring System</h4>
         <p>PIC16F877A + IR sensor with UART to ESP32. Integrated with ThingSpeak for obstacle detection visualization.</p>
       </div>
@@ -502,17 +517,16 @@ body.light-mode .social-icons a:hover {
 <!-- 6 -->
 <div class="modal fade" id="proj6Modal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-light d-flex flex-md-row">
-      <img src="projects/water level.png" class="w-50 rounded-start" alt="Water Level Controller">
-      <div class="p-4 w-50">
+    <div class="modal-content bg-dark text-light d-flex flex-column flex-md-row">
+      <img src="projects/water level.png" class="img-fluid modal-img" alt="Water Level Controller">
+      <div class="p-4 flex-fill">
         <h4>Automatic Water Level Controller</h4>
         <p>8051 + ultrasonic sensor for water monitoring. Automated motor control to prevent overflow and save water.</p>
       </div>
     </div>
   </div>
 </div>
-
-
+  
   <!-- Certificates Slider -->
   <section id="certificates" data-aos="fade-up">
     <h2 class="section-title">Certifications</h2>
