@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aravindhan | TechTrove Portfolio</title>
@@ -235,6 +234,42 @@ body.light-mode .social-icons a {
 body.light-mode .social-icons a:hover {
   color: #333;
 }
+/* ----------------project models ---------------- */
+
+.project-card {
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  position: relative;
+}
+.project-card img {
+  transition: transform 0.4s ease;
+  filter: brightness(75%);
+}
+.project-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(100%);
+}
+.project-card .card-img-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  transition: background 0.3s ease;
+}
+
+/* Ensure all project images are same size and responsive */
+.project-card img {
+  height: 220px;           /* fixed height */
+  width: 100%;             /* stretch to full card width */
+  object-fit: cover;       /* crop/scale without distortion */
+  border-radius: 8px;      /* optional rounded edges */
+}
+
+/* Mobile adjustment */
+@media (max-width: 576px) {
+  .project-card img {
+    height: 180px;
+  }
+}
+
 
   </style>
 </head>
@@ -278,46 +313,185 @@ body.light-mode .social-icons a:hover {
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" data-aos="fade-up">
-    <h2 class="section-title">My Skills</h2>
-    <div class="container text-center skills">
-      <span>Python</span>
-      <span>C Programming</span>
-      <span>HTML & CSS</span>
-      <span>Bootstrap</span>
-      <span>Git</span>
-      <span>SQL</span>
-    </div>
-  </section>
+<!-- Skills Section -->
+<section id="skills" data-aos="fade-up">
+  <h2 class="section-title">My Skills</h2>
+  <div class="container text-center skills">
+
+    <!-- Embedded Systems & Microcontrollers -->
+    <h4 class="mb-3" style="color: var(--particle-color);">Embedded Systems & Microcontrollers</h4>
+    <span>8051 Microcontroller</span>
+    <span>PIC16F877A</span>
+    <span>PIC18F46K22</span>
+    <span>ESP32</span>
+    <span>UART, SPI, I2C, Wi-Fi, BLE</span>
+
+    <!-- Divider -->
+    <hr style="border: 1px solid #1c1f2c; margin: 40px auto; width: 60%;">
+
+    <!-- Programming & Web Development -->
+    <h4 class="mb-3" style="color: var(--particle-color);">Programming & Web Development</h4>
+    <span>C Programming</span>
+    <span>Python</span>
+    <span>SQL</span>
+    <span>HTML & CSS</span>
+    <span>Bootstrap</span>
+    <span>Git</span>
+  </div>
+</section>
+
 
   <!-- Projects Section -->
-  <section id="projects" class="projects" data-aos="fade-up">
-    <h2 class="section-title">Projects</h2>
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>Complaint Management System</h5>
-            <p>A Python-based complaint registration system using CLI.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>BLE Mesh Monitoring</h5>
-            <p>Wearable tech for patient monitoring using BLE Mesh. Reliable and scalable.</p>
-            <a href="https://youtu.be/VFXUQjVbaOo?si=z__W5s2nZGqLmT6I" target="_blank">Watch Demo</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>AJ TEAS Website</h5>
-            <p>Responsive static menu website built with HTML and CSS.</p>
-            <a href="https://coffyday.netlify.app/" target="_blank">Visit Site</a>
+<section id="projects" class="projects" data-aos="fade-up">
+  <h2 class="section-title">Projects</h2>
+  <div class="container">
+    <div class="row g-4 text-center">
+
+      <!-- Complaint Management System -->
+      <div class="col-md-4">
+        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#proj1Modal">
+          <img src="imge/projects/complain.png"card-img" alt="Complaint Management">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h6 class="text-white fw-bold">Complaint Management System</h6>
           </div>
         </div>
       </div>
+
+      <!-- BLE Mesh Monitoring -->
+      <div class="col-md-4">
+        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#proj2Modal">
+          <img src="imge/projects/ble2.jpg" class="card-img" alt="BLE Mesh">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h6 class="text-white fw-bold">BLE Mesh Monitoring</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- AJ TEAS Website -->
+      <div class="col-md-4">
+        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#proj3Modal">
+          <img src="imge/projects/aj1.jpg" class="card-img" alt="AJ TEAS Website">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h6 class="text-white fw-bold">AJ TEAS Website</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- IoT Smart Fan System -->
+      <div class="col-md-4">
+        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#proj4Modal">
+          <img src="imge/projects/smatr fan.jfif" class="card-img" alt="Smart Fan">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h6 class="text-white fw-bold">IoT-Based Smart Fan System</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- IR Sensor Monitoring System -->
+      <div class="col-md-4">
+        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#proj5Modal">
+          <img src="imge/projects/ir.jpg" class="card-img" alt="IR Monitoring">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h6 class="text-white fw-bold">IR Sensor Monitoring System</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automatic Water Level Controller -->
+      <div class="col-md-4">
+        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#proj6Modal">
+          <img src="imge/projects/water level.png" class="card-img" alt="Water Level Controller">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h6 class="text-white fw-bold">Automatic Water Level Controller</h6>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Project Modals -->
+<!-- 1 -->
+<div class="modal fade" id="proj1Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light d-flex flex-md-row">
+      <img src="imge/projects/complain.png" class="w-50 rounded-start" alt="Complaint Management">
+      <div class="p-4 w-50">
+        <h4>Complaint Management System</h4>
+        <p>A Python-based complaint registration system using CLI. Allows users to file, track, and resolve complaints efficiently.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="modal fade" id="proj2Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light d-flex flex-md-row">
+      <img src="imge/projects/ble1.jpg" class="w-50 rounded-start" alt="BLE Mesh">
+      <div class="p-4 w-50">
+        <h4>BLE Mesh Monitoring</h4>
+        <p>Wearable tech for patient monitoring using BLE Mesh. Scalable, reliable, and supports real-time visualization.</p>
+        <a href="https://youtu.be/VFXUQjVbaOo?si=z__W5s2nZGqLmT6I" target="_blank" class="btn btn-sm btn-info mt-2">Watch Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="modal fade" id="proj3Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light d-flex flex-md-row">
+      <img src="imge/projects/aj2.jpg" class="w-50 rounded-start" alt="AJ TEAS">
+      <div class="p-4 w-50">
+        <h4>AJ TEAS Website</h4>
+        <p>A static responsive menu website for a tea shop, built using HTML & CSS with a clean design and device-friendly layout.</p>
+        <a href="https://coffyday.netlify.app/" target="_blank" class="btn btn-sm btn-info mt-2">Visit Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="modal fade" id="proj4Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light d-flex flex-md-row">
+      <img src="imge/projects/smatr fan.jfif" class="w-50 rounded-start" alt="Smart Fan">
+      <div class="p-4 w-50">
+        <h4>IoT-Based Smart Fan System</h4>
+        <p>Developed using ESP32 + temperature sensor with ThingSpeak IoT for real-time monitoring, visualization, and automatic fan speed control.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="modal fade" id="proj5Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light d-flex flex-md-row">
+      <img src="imge/projects/ir.jpg" class="w-50 rounded-start" alt="IR Monitoring">
+      <div class="p-4 w-50">
+        <h4>IR Sensor Monitoring System</h4>
+        <p>PIC16F877A + IR sensor with UART to ESP32. Integrated with ThingSpeak for obstacle detection visualization.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="modal fade" id="proj6Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light d-flex flex-md-row">
+      <img src="imge/projects/water level.png" class="w-50 rounded-start" alt="Water Level Controller">
+      <div class="p-4 w-50">
+        <h4>Automatic Water Level Controller</h4>
+        <p>8051 + ultrasonic sensor for water monitoring. Automated motor control to prevent overflow and save water.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Certificates Slider -->
   <section id="certificates" data-aos="fade-up">
