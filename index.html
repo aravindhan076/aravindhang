@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aravindhan | TechTrove Portfolio</title>
 
-  <!-- Google Fonts   -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
@@ -284,6 +284,7 @@ body.light-mode .social-icons a:hover {
   }
 }
 
+
   </style>
 </head>
 <body>
@@ -359,6 +360,15 @@ body.light-mode .social-icons a:hover {
   <h2 class="section-title">Projects</h2>
   <div class="container">
     <div class="row g-4 text-center">
+     <!-- Smart Medicine Reminder Box -->
+<div class="col-md-4">
+  <div class="card project-card" data-bs-toggle="modal" data-bs-target="#proj7Modal">
+    <img src="projects/MEDICINE BOX.png" class="card-img" alt="Smart Medicine Reminder Box">
+    <div class="card-img-overlay d-flex align-items-end">
+      <h6 class="text-white fw-bold">Smart Medicine Reminder Box</h6>
+    </div>
+  </div>
+</div>
 
       <!-- Complaint Management System -->
       <div class="col-md-4">
@@ -505,7 +515,25 @@ body.light-mode .social-icons a:hover {
     </div>
   </div>
 </div>
-  
+<!-- 7 -->
+<div class="modal fade" id="proj7Modal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light d-flex flex-column flex-md-row">
+      <img src="projects/MEDI_ONE.png" class="img-fluid modal-img" alt="Smart Medicine Reminder Box">
+      <div class="p-4 flex-fill">
+        <h4>Smart Medicine Reminder Box</h4>
+        <p>
+          A PIC16F877A-based medicine reminder system integrated with a DS3231 RTC and EEPROM.
+          The system schedules medicine reminders using RTC, providing alerts through LEDs and a buzzer.  
+          Scheduled data is stored securely in EEPROM, ensuring reliability even during power-off conditions.  
+          Future upgrade includes a web dashboard for remote healthcare monitoring and timely notifications.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <!-- Certificates Slider -->
   <section id="certificates" data-aos="fade-up">
     <h2 class="section-title">Certifications</h2>
